@@ -1,0 +1,11 @@
+NET "clk"                  IOSTANDARD = LVCMOS33 | LOC = P45;	#48 MHz global clock 				
+NET "resetn_cube"          IOSTANDARD = LVCMOS33 | LOC = P36;	#F   				
+NET "mode_selector_in"     IOSTANDARD = LVCMOS33 | LOC = P20;	#A	
+NET "light_selector_in"    IOSTANDARD = LVCMOS33 | LOC = P7;	#B  	
+NET "mode_selector_out"    IOSTANDARD = LVCMOS33 | LOC = P32;	#D
+NET "light_selector_out"   IOSTANDARD = LVCMOS33 | LOC = P33;	#E
+
+NET "debouncer_light_selector_inst/d_trigger_1_inst/nand3_and0000" NOREDUCE;
+NET "debouncer_light_selector_inst/d_trigger_2_inst/nand3_and0000" NOREDUCE;
+NET "debouncer_mode_selector_inst/d_trigger_1_inst/nand3_and0000" NOREDUCE;
+NET "debouncer_mode_selector_inst/d_trigger_2_inst/nand3_and0000" NOREDUCE;

@@ -1,0 +1,31 @@
+NET "clk_system"	BUFG=CLK | PERIOD=20 | LOC=P1; #50 MHz global clock 
+					
+NET "aresetn"	LOC=P13;	
+
+NET "stage[0]"	LOC=P30;	
+NET "stage[1]"	LOC=P29;	
+NET "stage[2]"	LOC=P28;	
+NET "stage[3]"	LOC=P27;	
+
+NET "lines[0]"	LOC=P2;
+NET "lines[1]"	LOC=P3;
+NET "lines[2]"	LOC=P5;
+NET "lines[3]"	LOC=P6;
+NET "lines[4]"	LOC=P32;
+NET "lines[5]"	LOC=P33;
+NET "lines[6]"	LOC=P34;
+NET "lines[7]"	LOC=P36;
+NET "lines[8]"	LOC=P37;
+NET "lines[9]"	LOC=P38;
+NET "lines[10]"	LOC=P39;
+NET "lines[11]"	LOC=P40;
+NET "lines[12]"	LOC=P41;
+NET "lines[13]"	LOC=P42;
+NET "lines[14]"	LOC=P43;
+NET "lines[15]"	LOC=P44;
+
+NET "status"	LOC=P31; 
+
+NET "m_sel"		LOC=P7;
+NET "comp_en"	LOC=P8;
+NET "comp"		LOC=P12;
