@@ -50,7 +50,7 @@ begin
         I => clk_system 
     );
 	
-	reset <= not aresetn;
+    reset <= not aresetn;
 	
     leds_control_inst: leds_control 
     port map
