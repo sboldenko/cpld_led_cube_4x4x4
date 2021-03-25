@@ -13,7 +13,7 @@ port
 (
 	clk_system : in  std_logic;
 	aresetn    : in  std_logic;
-	stage      : out std_logic_vector(3 downto 0);
+	stage      : out std_logic_vector( 3 downto 0);
 	lines      : out std_logic_vector(15 downto 0);
 	m_sel      : in  std_logic;
 	comp_en    : in  std_logic;
@@ -32,23 +32,23 @@ architecture behavioral of top_cpld_xc9572xl_module is
 		m_sel   : in  std_logic;
 		comp_en : in  std_logic;
 		comp    : in  std_logic;          
-		stage   : out std_logic_vector(3 downto 0);
+		stage   : out std_logic_vector( 3 downto 0);
 		lines   : out std_logic_vector(15 downto 0);
 		status  : out std_logic
 	);
 	end component;
 	
-	signal clk         : std_logic;
-	signal reset       : std_logic;
+	signal clk   : std_logic;
+	signal reset : std_logic;
 	
 begin
 	
-	BUFG_inst : BUFG
-   port map 
+    BUFG_inst : BUFG
+    port map 
 	(
-      O => clk,     
-      I => clk_system 
-   );
+        O => clk,     
+        I => clk_system 
+    );
 	
 	reset <= not aresetn;
 	
