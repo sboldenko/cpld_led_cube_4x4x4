@@ -14,8 +14,7 @@ module low_frequency_clk_generator
         
         if(reset)
             counter <= 19'd0;
-        else if(counter == 19'hFFFFF) 
-        begin
+        else if(counter == 19'hFFFFF) begin
             counter <= 19'd0;
             result_clk <= !result_clk;
         end
