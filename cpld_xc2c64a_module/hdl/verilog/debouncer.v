@@ -20,7 +20,7 @@ module debouncer
 		.D(invert_pulse), 
 		.clk(clk_low), 
 		.Q(Q1)
-   );	
+    );	
 	
 	not not_1_inst(N1, clk_low);
 	
@@ -29,7 +29,7 @@ module debouncer
 		.D(Q1), 
 		.clk(N1), 
 		.Q(Q2)
-   );
+    );
 	
 	always @ (posedge clk_high)
 	begin

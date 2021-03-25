@@ -20,13 +20,13 @@ module top_cpld_xc2c64a
 		.reset(reset),
 		.clk_high(clk), 
 		.clk_low(clk_low)
-   );
+    );
 	
 	reset_module reset_module_inst 
 	(
 		.clk(clk), 
 		.reset(reset)
-   );
+    );
 	
 	debouncer debouncer_mode_selector_inst 
 	(
@@ -34,7 +34,7 @@ module top_cpld_xc2c64a
 		.clk_low(clk_low), 
 		.in_pulse(mode_selector_in), 
 		.out_pulse(mode_selector_pulse)
-   );
+    );
 	
 	debouncer debouncer_light_selector_inst 
 	(
@@ -42,7 +42,7 @@ module top_cpld_xc2c64a
 		.clk_low(clk_low), 
 		.in_pulse(light_selector_in), 
 		.out_pulse(light_selector_pulse)
-   );
+    );
 	
 	pulse_delayer pulse_delayer_mode_selector_inst  
 	(
@@ -50,7 +50,7 @@ module top_cpld_xc2c64a
 		.reset(reset),		
 		.pulse_in(mode_selector_pulse), 
 		.pulse_out(mode_selector_pulse_delayed)
-   );
+    );
 	 
 	pulse_delayer pulse_delayer_light_selector_inst  
 	(
@@ -58,7 +58,7 @@ module top_cpld_xc2c64a
 		.reset(reset),		
 		.pulse_in(light_selector_pulse), 
 		.pulse_out(light_selector_pulse_delayed)
-   );
+    );
 	
 	assign mode_selector_out = ~mode_selector_pulse_delayed;
 	assign light_selector_out = ~light_selector_pulse_delayed;
